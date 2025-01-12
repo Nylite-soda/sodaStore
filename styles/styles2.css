@@ -1,0 +1,150 @@
+
+
+*{
+    box-sizing: border-box;
+    font-family: Lato, Helvetica;
+}
+
+body{
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    position: relative;
+    background-color: #f4f2f2;
+    justify-content: space-evenly !important;
+    padding: 15px 10px;
+    box-shadow: 0 2px 4.5px 2px rgba(0, 0, 0, 0.29);
+    z-index: 99;
+}
+
+.logo img{
+    height: 60px;
+}
+
+.navitems{
+    width: 60%;
+    min-width: 400px;
+    max-width: 1000px;
+}
+.actionicons{
+    width: 10%;
+    min-width: 100px;
+    max-width: 300px;
+}
+.actionicons img{
+    filter: invert(75%) sepia(160%) saturate(500%) hue-rotate(-19deg) brightness(60%) contrast(45%);
+}
+
+.navitems ul, .actionicons ul{
+    list-style: none;
+    margin: auto 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between !important;
+}
+.navitems ul li, .actionicons ul li{
+    display: inline-block;
+}
+.navitems ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 550;
+    color: #2A0D04;
+    letter-spacing: 1px;
+    padding: 0.5em 0.9em 0.4em;
+    transition: 0.2s ease-in-out;
+}
+.navitems ul li a:hover{
+    border-bottom: 1px solid #2A0D04;
+}
+.navitems ul li a:active{
+    background-color: #85604F;
+    color: #f4f2f2;
+    border-radius: 8px 8px 0 0;
+    font-weight: 500;
+}
+
+.one{
+    background-color: #2A0D04;
+    /* height: 600px; */
+    width: 100%;
+    overflow: hidden;
+    color: #f4f2f2;
+}
+
+.one-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+.one-container::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/colorful-arrow-symbols-mobile-phone-pen-blue-backdrop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    opacity: 0.2;
+    transform: scaleX(-1);
+}
+
+.one-text{
+    width: 60%;
+    padding: 3em 3em 4em 4em;
+    z-index: 1;
+}
+.one-text h1{
+    margin: 0;
+    font-size: 4.2em;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 0 #f4f2f2;
+}
+.one-text h3{
+    margin-top: 15px;
+    font-size: 2.7em;
+}
+
+.one-image{
+    height: 100%;
+    align-items: flex-end !important;
+    padding-top: 2em;
+}
+
+.one-image img{
+    /* height: 100%; */
+    width: 400px;
+    transform: scaleX(-1);
+    position: relative;
+    padding-right: 1em;
+}
+
+.one-cta{
+    background-color: #F1D3B3;
+    padding: 1em 1.2em;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.3em;
+    color: #2A0D04;
+    text-shadow: 0.5px 0 #2A0D04;
+    letter-spacing: 0.5px;
+    transition: 0.2s ease-in-out;
+}
+
+.one-cta:hover{
+    background-color: #84614e;
+    color: #fff;
+    border: 1q solid #F1D3B3;
+}

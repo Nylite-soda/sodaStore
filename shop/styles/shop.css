@@ -1,0 +1,223 @@
+
+
+body{
+    flex-direction: column;
+    background-color: #f4f2f2;
+    color: #45322C;
+}
+
+.navbar{
+    position: relative;
+}
+
+.shop-header{
+    position: sticky;
+    top: 0px;
+    background-color: #f4f2f2;
+    color: #f4f2f2;
+    padding: 42px 15px 37px;
+    height: 60px;
+    width: 100%;
+    justify-content: space-around;
+    align-self: center;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.29);
+    z-index: 999;
+}
+
+.shop-header-left-section{
+    width: 80%;
+    /* height: 35px;
+    background-color: #f4f2f2;
+    border-radius: 30px;
+    padding: 5px; */
+}
+
+.search-bar{
+    width: 90%;
+    height: 40px;
+    background-color: #f4f2f2;
+    border-radius: 30px 0 0 30px;
+    padding-inline-start: 20px;
+    border: 1px solid #45322C;
+    border-right: none;
+    color: #45322C;
+    font-size: 14px;
+}
+.search-bar:focus-visible{
+    outline: #45322C auto 1px;
+}
+.search-bar::placeholder{
+    color: rgba(69, 50, 44, 0.7)
+}
+
+.search-button{
+    height: 40px;
+    border-radius: 0 30px 30px 0;
+    background-color: transparent;
+    border: 1px solid #45322C;
+    border-left: none;
+    width: 50px;
+    cursor: pointer;
+}
+
+.shop-header-right-section{
+    width: 18%;
+    justify-content: space-around;
+}
+
+.header-link{
+    text-decoration: none;
+    color: #45322C;
+    height: 42px;
+    width: 48%;
+}
+.header-link:hover{
+    border-bottom: 1px solid #45322C;
+}
+
+.orders-and-returns{
+    flex-direction: column;    
+}
+
+.returns-text {
+    display: block;
+    font-size: 13px;
+    text-align: right;
+    width: 61px;
+}
+
+.orders-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cart-icon{
+    position: relative;
+    left: 8px;
+}
+
+.cart-quantity{
+    color: #8b6d50;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 0 2px;
+    /* height: 12px; */
+    font-size: 11px;
+    position: relative;
+    left: -10px;
+    top: -8px;
+    font-weight: 800;
+}
+
+.popular-products{
+    padding: 30px 0;
+    /* height: 400px; */
+    width: 100%;
+    flex-direction: column;
+}
+
+.popular-products-title{
+    color: #45322C;
+    padding: 5px 0;
+}
+.popular-products-tagline{
+    color: rgba(69, 50, 44, 0.9);
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+}
+
+.popular-products-grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: space-around;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.product-container {
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgb(233, 231, 230);
+    padding: 10px 25px 25px;
+    border-radius: 10px;
+    width: 400px;
+    width: 252px;
+}
+
+.product-image-container {
+    height: 180px;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.product-name {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-weight: 700;
+    margin-bottom: 15px;
+    align-self: start;
+    padding-top: 10px;
+}
+
+.added-to-cart {
+    color: rgb(6, 125, 98);
+    font-size: 16px;
+    margin-bottom: 8px;
+    opacity: 0;
+}
+
+.added-to-cart img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.add-to-cart-button {
+    width: 80%;
+    padding: 8px;
+    border-radius: 50px;
+    border: 1px solid #45322C;
+    background-color: #F1D3B3;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+.add-to-cart-button:hover {
+    background-color: #45322C;
+    color: #f4f2f2;
+}
+
+.products-grid{
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-content: space-around;
+    justify-items: center;
+    grid-gap: 5px;
+}
+
+.products-tagline{
+    color: rgba(69, 50, 44, 0.9);
+    letter-spacing: 1px;
+    padding: 40px 0;
+    font-size: 20px;
+    text-shadow: 1px 0 #45322C;
+}
+
+.product-rating-container {
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+.product-rating-stars {
+    width: 100px;
+    margin-right: 6px;
+  }

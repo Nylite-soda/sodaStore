@@ -1,0 +1,416 @@
+
+
+.contact-container{
+    position: relative;
+    padding: 10vh 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/contact-bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.contact-container::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/contact-bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    opacity: 0.7
+}
+
+.contact-content{
+    margin: 0 auto;
+    width: 1000px;
+    min-width: 1000px;
+    max-width: 1000px;
+    height: 550px;
+    background-color: rgba(133, 96, 79, 0.48);
+    backdrop-filter: blur(4px);
+    border-radius: 28px;
+    padding: 5em 5em;
+    top: 90px;
+    bottom: 0;
+}
+
+header{
+    position: absolute;
+    top: 0 !important;
+    width: 100%;
+    background-color: #45322C;
+    color: #F4F2F2;
+    border-radius: 28px 28px 0 0;
+}
+
+.gitwu{
+    height: 80px;
+    border-bottom: 3px solid #F1D3B3;
+    padding: 10px;
+    font-size: 2em;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 20px 20px 0 0;
+}
+
+.card{
+    position: relative;
+    top: 2.2em; 
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #F1D3B3; */
+    border-radius: 28px;
+    justify-content: space-between !important;
+    mask: url(#circle-mask);
+    -webkit-mask: url(#circle-mask);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat; 
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+
+.wrap{
+    width: 35%;
+    height: 100%;
+    position: relative;
+}
+
+.contact-info{
+    position: absolute;
+    background-color: #F1D3B3;
+    height: 235px;
+    width: 389px;
+    border-radius: 28px 28px 0 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    bottom: -235px;
+    
+}
+
+.info{
+    flex-direction: column;
+    padding-top: 7px;
+}
+.info p{
+    font-weight: bold;
+    color: #45322C;
+    font-size: 1.45em;
+    margin-top: -2px;
+    margin-bottom: 7px;
+    letter-spacing: 0.6px;
+}
+
+.WhatsApp{
+    width: 30px;
+}
+.gmail{
+    width: 25px;
+}
+
+.contactUs{
+    position: relative !important;
+    height: 65px;
+    font-size: 1.8em;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    border: 1q solid #F1D3B3;
+}
+
+.leaveAmessage{
+    width: 70%;
+    height: 100%;
+    background-color: #F1D3B3;
+    border-radius: 0px 28px 28px 0;
+    float: right;
+}
+
+.lam{
+    position: relative !important;
+    height: 70px;
+    font-size: 1.8em;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    border-radius: 0 28px 0 0;
+}
+
+.contact-form{
+    position: relative;
+    top: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+fieldset{
+    border: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 30px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row{
+    width: 100%;
+    justify-content: space-evenly !important;
+    align-items: center;
+}
+
+.col{
+    background-color: #F2E5D8;
+    border-radius: 9px;
+    padding: 8px 8px 8px 10px ;
+}
+
+.form-data{
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    width: 160px;
+    font-weight: 500;
+    padding-inline-start: 8px;
+    color: #45322C;
+}
+.form-data::placeholder, textarea::placeholder{
+    color: rgba(69, 50, 44, 0.5);
+}
+.form-data:focus-visible, textarea{
+    outline: none;
+}
+
+.contact-form textarea{
+    position: relative;
+    padding: 0.4em 1em;
+    background-color: #F2E5D8;
+    font-size: 1em;
+    border-radius: 9px;
+    border: none;
+    top: 5px;
+    width: 433px;
+    color: #45322C;
+}
+
+.submit{
+    position: relative;
+    padding: 4px 20px 6px;
+    top: 10px;
+    border-radius: 9px;
+    border: 1px solid #45322C;
+    background-color: #F1D3B3;
+    color: #45322C;
+    font-size: 1.2em;
+    transition: ease-in-out 0.2s;
+}
+.submit:hover {
+    cursor: pointer;
+    background-color: #45322C;
+    color: #F2E5D8;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+
+.or{
+    position: absolute;
+    left: 287px;
+    top: 260px;
+    z-index: 99;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: #45322C;
+    border: 2px solid #F1D3B3;
+    font-size: 2.5em;
+    text-shadow: 1px 0 #F2E5D8;
+    color: #F2E5D8;
+}
+
+@media screen and (max-width: 500px) {
+    .contact-container{
+        height: auto;
+    }
+    .contact-content {
+        /* max-width: 90vw; */
+        min-width: 90vw;
+        width: 358px;
+        flex-wrap: wrap;
+        padding: 4vw;
+        height: 800px;
+    }
+    /* .contact-content{
+        margin: 0 auto;
+        width: 1000px;
+        min-width: 1000px;
+        max-width: 1000px;
+        height: 550px;
+        background-color: rgba(133, 96, 79, 0.48);
+        backdrop-filter: blur(4px);
+        border-radius: 20px;
+        padding: 5em 5em;
+    } */
+/*     
+    header{
+        position: absolute;
+        top: 0 !important;
+        width: 100%;
+        background-color: #45322C;
+        color: #F4F2F2;
+        border-radius: 20px 20px 0 0;
+    } */
+    
+    .gitwu{
+        height: 50px;
+        padding: 20px;
+        border-bottom: 3px solid #F1D3B3;
+        font-size: 4vw;
+    }
+    
+    .card{
+        padding-top: 30px;
+        flex-direction: column-reverse;
+        gap: 20px;
+        top: 0;
+        height: auto;
+        mask: none;
+    }
+    
+    .wrap{
+        width: 350px;
+        height: auto;
+        position: relative;
+    }
+    
+    .contact-info{
+        height: auto;
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        transform: rotate(0deg);
+        /* border: 1px solid #F1D3B3; */
+        bottom: 0;
+        position: relative;
+        border: 1px solid #45322C;
+    }
+    
+    /* .info{
+        flex-direction: column;
+        padding-top: 7px;
+    } */
+    .info p{
+        font-weight: 400;
+        font-size: 1em;
+        margin-top: 2px;
+        margin-bottom: 12px;
+        /* letter-spacing: 0.6px; */
+    }
+    
+    .WhatsApp{
+        width: 30px;
+    }
+    .gmail{
+        width: 25px;
+    }
+    
+    .contactUs{
+        height: 50px;
+        font-size: 4vw;
+        border-radius: 0;
+    }
+    
+    .leaveAmessage{
+        width: 350px;
+        height: 470px;
+        background-color: #F1D3B3;
+        border-radius: 20px 20px 0 0;
+        float: none;
+        border: 1px solid #45322C;
+    }
+    
+    .lam{
+        height: 50px;
+        font-size: 4vw;
+        padding: 20px;
+        /* word-spacing: 2px;
+        letter-spacing: 2px; */
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .contact-form{
+        /* position: relative; */
+        top: 0;
+        /* flex-direction: column; */
+    }
+    
+    fieldset{
+        border: none;
+        width: 100%;
+        padding: 10px;
+        /* flex-direction: column; */
+        gap: 0;
+    }
+    
+    .row{
+        width: 100%;
+        max-width: unset;
+        flex-wrap: wrap;
+    }
+    
+    .col{
+        /* margin: 1vw 0;
+        background-color: #F2E5D8;
+        border-radius: 9px;
+        padding: 8px 8px 8px 10px ; */
+        width: 75%;
+        margin: 5px 0;
+    }
+    
+    .form-data::placeholder, textarea::placeholder{
+        color: rgba(69, 50, 44, 0.5);
+    }
+    .form-data:focus-visible, textarea{
+        outline: none;
+    }
+    
+    .contact-form textarea{
+        width: 75%;
+    }
+
+    .gap{
+        margin-top: 8px;
+    }
+    
+    .submit{
+        position: relative;
+        padding: 4px 20px 6px;
+        top: 10px;
+        border-radius: 9px;
+        border: 1px solid #45322C;
+        background-color: #F1D3B3;
+        color: #45322C;
+        font-size: 1.2em;
+        transition: ease-in-out 0.2s;
+    }
+    .submit:hover {
+        cursor: pointer;
+        background-color: #45322C;
+        color: #F2E5D8;
+    }
+    
+    svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -999;
+    }
+    
+    .or{
+        display: none;
+    }
+}
