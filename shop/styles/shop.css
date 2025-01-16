@@ -141,8 +141,8 @@ body{
     border: 1px solid rgb(233, 231, 230);
     padding: 10px 25px 25px;
     border-radius: 10px;
-    width: 400px;
-    width: 252px;
+    /* width: 400px; */
+    min-width: 300px;
 }
 
 .product-image-container {
@@ -161,6 +161,7 @@ body{
 .product-name {
     height: 40px;
     margin-bottom: 10px;
+    align-self: flex-start;
 }
 
 .product-price {
@@ -168,6 +169,7 @@ body{
     margin-bottom: 15px;
     align-self: start;
     padding-top: 10px;
+    letter-spacing: 0.2px;
 }
 
 .added-to-cart {
@@ -175,6 +177,7 @@ body{
     font-size: 16px;
     margin-bottom: 8px;
     opacity: 0;
+    transition: 0.3s ease;
 }
 
 .added-to-cart img {
@@ -220,4 +223,62 @@ body{
 .product-rating-stars {
     width: 100px;
     margin-right: 6px;
-  }
+}
+
+
+
+
+/*--------------------- THIS ------------------------------*/
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
+.header-strip{
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #45322C;
+    color: #f4f2f2;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.see-all-link{
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    color: #f2f2f2;
+}
+.see-all-link:hover{
+    text-decoration: underline;
+}
+
+.today-deals-products-grid{
+    display: grid;
+    grid-template-columns: 310px 310px 310px 310px;
+    justify-content: space-around;
+    justify-items: center;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+
+@media screen and (max-width: 1300px){
+    .today-deals-products{
+        overflow-x: auto;
+        scrollbar-width: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .today-deals-products-grid{
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 5px;
+    }
+    
+}

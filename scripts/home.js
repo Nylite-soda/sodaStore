@@ -99,4 +99,15 @@ export function renderNavBarandFooter(){
 }
 
 renderNavBarandFooter();
-window.addEventListener('resize', renderNavBarandFooter());
+
+// window.addEventListener('resize', ()=>{
+//     console.log('resized');
+//     renderNavBarandFooter();
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('resize', () => {
+      renderNavBarandFooter();
+    });
+  });
+  
