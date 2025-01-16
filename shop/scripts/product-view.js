@@ -1,5 +1,6 @@
-import { renderNavBarandFooter } from "../../scripts/home.js";
+import { renderNavBarandFooter } from "./utils/rendering.js";
 
 
 
-renderNavBarandFooter();
+
+renderNavBarandFooter()
