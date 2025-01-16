@@ -10,7 +10,7 @@ export function renderNavBarandFooter(){
                 <li><a href="index.html" class="items">Home</a></li>
                 <li><a href="#" class="items">Meet Me</a></li>
                 <li><a href="#" class="items">Portfolio</a></li>
-                <li><a href="shop.html" class="items">Shop</a></li>
+                <li><a href="shop-home.html" class="items">Shop</a></li>
                 <li><a href="contact.html" class="items">Contact</a></li>
             </ul>
         </div>
@@ -52,7 +52,7 @@ export function renderNavBarandFooter(){
                 <li><a href="index.html" class="items">Home</a></li>
                 <li><a href="#" class="items">Meet Me</a></li>
                 <li><a href="#" class="items">Portfolio</a></li>
-                <li><a href="#" class="items">Shop</a></li>
+                <li><a href="shop-home.html" class="items">Shop</a></li>
                 <li><a href="contact.html" class="items">Contact</a></li>
             </ul>
         </div>
