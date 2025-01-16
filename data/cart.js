@@ -33,14 +33,18 @@ export function addToCart (id) {
             quantity: 1
         });
     }
+    updateCartQuantity();
+    saveToStorage("cart", cart);
+}
 
+export function removeFromCart(id) {}
+
+export function updateCartQuantity(){
     let cartQuantity = 0;
     cart.forEach(cartItem => {
         cartQuantity += cartItem.quantity
     })
     
     qtyContainer.innerHTML = cartQuantity;
-    
     saveToStorage("cartQty", cartQuantity);
-    saveToStorage("cart", cart);
 }

@@ -55,10 +55,15 @@ const addToCartButtons = document.querySelectorAll(".js-add-to-cart-button");
 
 addToCartButtons.forEach((button) => {
     button.addEventListener("click", () => {
+        let timeOutId;
+        if (timeOutId) {
+            clearTimeout(timeOutId);
+        };
+        
         addToCart(button.dataset.productId);
 
         button.previousElementSibling.style.opacity = "1";
-        setTimeout(() => {
+        timeOutId = setTimeout(() => {
             button.previousElementSibling.style.opacity = "0";
         }, 2000);
     });
