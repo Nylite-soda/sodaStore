@@ -5,11 +5,11 @@ let matchingProduct;
 let qtyContainer;
 export let cartQuantity;
 
-
-function updateQtyHTML() {
+export function updateQtyHTML() {
     cartQuantity = getFromStorage("cartQty") || 0;
     qtyContainer = document.querySelectorAll(".js-cart-quantity");
     qtyContainer.forEach(container => {
+        console.log(container)
         container.innerHTML = cartQuantity;
     });
 }

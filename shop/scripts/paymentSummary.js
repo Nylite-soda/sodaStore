@@ -1,4 +1,4 @@
-import { cart, findProduct } from "../../data/cart.js";
+import { cart, findProduct, updateQtyHTML } from "../../data/cart.js";
 import { getDeliveryOptions } from "../../data/deliveryOptions.js";
 import { formatCurrency, formatToNaira, priceInNaira } from "./utils/moneyUtil.js";
 
@@ -30,7 +30,7 @@ export function renderPaymentSummary(){
 
         <div class="payment-summary-display">
           <div class="payment-summary-row">
-            <div class="cost-info">Items x3: <div class="payment-summary-money">₦ ${formatCurrency(price)}</div></div>
+            <div class="cost-info"><span>Items (<span class="js-cart-quantity"></span>):</span> <div class="payment-summary-money">₦ ${formatCurrency(price)}</div></div>
           </div>
 
           <div class="payment-summary-row">
@@ -54,4 +54,5 @@ export function renderPaymentSummary(){
             Place your order
           </button>
     `;
+    updateQtyHTML();
 }
