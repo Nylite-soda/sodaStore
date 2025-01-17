@@ -8,8 +8,10 @@ renderNavBarandFooter();
 renderStoreHeader();
 
 const todayDealsDisplayGrid = document.querySelector(".js-today-deals-products-grid");
-
 renderProducts(8, todayDealsDisplayGrid);
+
+const topPicksDisplayGrid = document.querySelector(".js-top-picks-products-grid");
+renderProducts(16, topPicksDisplayGrid);
 
 const addToCartButtons = document.querySelectorAll(".js-add-to-cart-button");
 // const 

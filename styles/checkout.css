@@ -10,10 +10,14 @@ body{
     max-width: 1800px;
 }
 
+.checkout-header{
+    justify-content: space-between;
+}
+
 .page-title {
     font-weight: 700;
     font-size: 24px;
-    margin: 18px auto 20px;
+    margin: 18px 0 20px;
 }
 
 .empty-cart {
@@ -26,12 +30,12 @@ body{
     font-size: 24px;
     gap: 10px;
 }
-.empty-cart a{
+.heading-link{
     text-decoration: none;
     color: #85604F;
     padding-bottom: 2px;
 }
-.empty-cart a:hover{
+.heading-link:hover{
     text-decoration: underline;
 }
 
@@ -45,7 +49,7 @@ body{
 @media (max-width: 1050px) {
     .main{
         position: relative;
-        /* top: -50px; */
+        top: -50px;
         transform: scale(0.9);
     }
     .checkout-grid {

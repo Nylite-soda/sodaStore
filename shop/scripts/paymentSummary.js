@@ -46,7 +46,7 @@ export function renderPaymentSummary(){
           </div>
 
           <div class="payment-summary-row total-row">
-            <div class="cost-info">Order total: <div class="payment-summary-money">₦${formatCurrency(totalCents)}</div></div>
+            <div class="cost-info">Order total: <div class="payment-summary-money">₦ ${formatCurrency(totalCents)}</div></div>
           </div>
         </div>
 

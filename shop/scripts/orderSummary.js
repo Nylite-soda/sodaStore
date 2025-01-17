@@ -13,7 +13,7 @@ export function renderOrderSummary(){
     if (cart.length === 0) {
         orderSummary.innerHTML = `
             <div class="empty-cart flex">
-                Your cart is empty. <a href="shop-home.html" class="link-primary">Continue shopping</a>
+                Your cart is empty. <a href="shop-home.html" class="heading-link link-primary">Continue shopping</a>
             </div>
         `;
         return;
