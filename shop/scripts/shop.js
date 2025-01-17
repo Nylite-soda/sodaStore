@@ -8,13 +8,18 @@ renderNavBarandFooter();
 renderStoreHeader();
 
 const todayDealsDisplayGrid = document.querySelector(".js-today-deals-products-grid");
-renderProducts(8, todayDealsDisplayGrid);
+if (todayDealsDisplayGrid){ renderProducts(8, todayDealsDisplayGrid);}
 
 const topPicksDisplayGrid = document.querySelector(".js-top-picks-products-grid");
-renderProducts(16, topPicksDisplayGrid);
+if (topPicksDisplayGrid){renderProducts(16, topPicksDisplayGrid);}
+
+const allProductsDisplayGrid = document.querySelector(".js-shop-products-grid");
+if (allProductsDisplayGrid){renderProducts(products.length, allProductsDisplayGrid);}
+
+const popularProductsDisplayGrid = document.querySelector(".js-popular-products-grid");
+if (popularProductsDisplayGrid){renderProducts(3, popularProductsDisplayGrid);}
 
 const addToCartButtons = document.querySelectorAll(".js-add-to-cart-button");
-// const 
 
 addToCartButtons.forEach((button) => {
     button.addEventListener("click", () => {

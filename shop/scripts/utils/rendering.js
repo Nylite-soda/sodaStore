@@ -135,6 +135,7 @@ export function renderStoreHeader(){
 }
 
 export function renderProducts(num, grid) {
+    console.log(num)
     for (let i = 0; i < num; i++) {
         grid.innerHTML += `
         <div class="product-container flex">
