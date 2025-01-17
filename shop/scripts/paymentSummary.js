@@ -1,7 +1,18 @@
+import { cart, findProduct } from "../../data/cart.js";
+import { inNaira, priceInNaira } from "./utils/moneyUtil.js";
 
 
 export function renderPaymentSummary(){
-    const paymentSummary = document.querySelector('.js-payment-summary');
+    let paymentSummary = document.querySelector('.js-payment-summary');
+    paymentSummary.innerHTML = ``;
+
+    let price;
+    cart.forEach(cartItem => {
+        let matchingProduct = findProduct(cartItem.id);
+        price = priceInNaira(matchingProduct.priceCents) * cartItem.quantity;
+        console.log(price)
+    });
+
     paymentSummary.innerHTML = `
         
           <div class="payment-summary-title">
