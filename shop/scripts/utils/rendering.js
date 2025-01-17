@@ -1,4 +1,7 @@
+import { updateCartQuantity } from "../../../data/cart.js";
 import { products } from "../../../data/products.js";
+import { renderOrderSummary } from "../orderSummary.js";
+import { renderPaymentSummary } from "../paymentSummary.js";
 import { inNaira } from "./moneyUtil.js";
 
 
@@ -101,6 +104,34 @@ export function renderNavBarandFooter(){
     
 }
 
+export function renderStoreHeader(){
+    const storeHeader = document.querySelector('.js-shop-header');
+    storeHeader.innerHTML = `
+        <div class="shop-header-left-section flex">
+          <input class="search-bar" type="text" placeholder="Search">
+  
+          <button class="search-button">
+            <img class="search-icon icons" src="./images/search.svg">
+          </button>
+        </div>
+  
+        <div class="shop-header-right-section flex">
+          <a class="orders-link header-link" href="orders.html">
+            <div class="orders-and-returns flex">
+              <span class="returns-text">Returns</span>
+              <span class="orders-text">& Orders</span>
+            </div>
+          </a>
+  
+          <a class="cart-link header-link flex" href="checkout.html">
+            <img class="cart-icon icons" src="./images/shopping_cart.svg">
+            <div class="cart-quantity js-cart-quantity flex"></div>
+            <div class="cart-text">Cart</div>
+          </a>
+        </div>
+    `;
+}
+
 export function renderProducts(num, grid) {
     for (let i = 0; i < num; i++) {
         grid.innerHTML += `
@@ -141,8 +172,14 @@ export function renderProducts(num, grid) {
     }
 }
 
+export function renderCheckout(){
+    renderOrderSummary();
+    renderPaymentSummary();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
       renderNavBarandFooter();
+      updateCartQuantity();
     });
 });

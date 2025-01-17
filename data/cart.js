@@ -2,8 +2,14 @@ import { getFromStorage, saveToStorage } from "../shop/scripts/utils/storage.js"
 import { products } from "./products.js";
 
 let matchingProduct;
-let qtyContainer = document.querySelector(".js-cart-quantity");
-qtyContainer.innerHTML = getFromStorage("cartQty") || 0;
+let qtyContainer;
+export let cartQuantity;
+
+document.addEventListener('DOMContentLoaded', () => {
+    cartQuantity = getFromStorage("cartQty") || 0;
+    qtyContainer = document.querySelector(".js-cart-quantity");
+    qtyContainer.innerHTML = cartQuantity;
+});
 
 export const cart  = getFromStorage("cart") || [];
 
@@ -40,7 +46,7 @@ export function addToCart (id) {
 export function removeFromCart(id) {}
 
 export function updateCartQuantity(){
-    let cartQuantity = 0;
+    cartQuantity = 0;
     cart.forEach(cartItem => {
         cartQuantity += cartItem.quantity
     })

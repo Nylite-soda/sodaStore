@@ -2,10 +2,11 @@
 import { products } from "../../data/products.js";
 import {inNaira } from "./utils/moneyUtil.js";
 import { addToCart } from "../../data/cart.js";
-import { renderNavBarandFooter, renderProducts } from "./utils/rendering.js";
+import { renderNavBarandFooter, renderProducts, renderStoreHeader } from "./utils/rendering.js";
 
 
 renderNavBarandFooter();
+renderStoreHeader();
 
 const todayDealsDisplayGrid = document.querySelector(".js-today-deals-products-grid");
 

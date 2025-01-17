@@ -1,6 +1,7 @@
-import { renderNavBarandFooter } from "./utils/rendering.js";
+import { renderNavBarandFooter, renderStoreHeader } from "./utils/rendering.js";
 
 
 
 
-renderNavBarandFooter()
+renderNavBarandFooter();
+renderStoreHeader();
