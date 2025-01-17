@@ -1,6 +1,5 @@
 
 import { products } from "../../data/products.js";
-import {inNaira } from "./utils/moneyUtil.js";
 import { addToCart } from "../../data/cart.js";
 import { renderNavBarandFooter, renderProducts, renderStoreHeader } from "./utils/rendering.js";
 

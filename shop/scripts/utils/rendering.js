@@ -2,7 +2,7 @@ import { updateCartQuantity } from "../../../data/cart.js";
 import { products } from "../../../data/products.js";
 import { renderOrderSummary } from "../orderSummary.js";
 import { renderPaymentSummary } from "../paymentSummary.js";
-import { inNaira } from "./moneyUtil.js";
+import { formatToNaira, priceInNaira } from "./moneyUtil.js";
 
 
 export function renderNavBarandFooter(){
@@ -156,7 +156,7 @@ export function renderProducts(num, grid) {
         </div>
 
         <div class="product-price">
-          ${inNaira(products[i]["priceCents"])}
+          ${formatToNaira(products[i]["priceCents"])}
         </div>
 
         <div class="product-spacer"></div>

@@ -1,6 +1,6 @@
 
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
-import { inNaira } from '../shop/scripts/utils/moneyUtil.js';
+import { formatToNaira } from '../shop/scripts/utils/moneyUtil.js';
  
 export const deliveryOptions = [
     {
@@ -26,9 +26,8 @@ export function renderDeliveryOptions(matchingProduct, cartItem){
     let deliveryDate;
     
     deliveryOptions.forEach(option => {
-        console.log(option);
         deliveryDate= generateDeliveryDate(option);
-        const price = option.priceCents === 0 ? "FREE Shipping" : `${inNaira(option.priceCents)} - Shipping`
+        const price = option.priceCents === 0 ? "FREE Shipping" : `${formatToNaira(option.priceCents)} - Shipping`
         const isChecked = option.id === Number(cartItem.deliveryOptionId) ? "checked" : ""
         html+=
         `
@@ -55,4 +54,15 @@ export function generateDeliveryDate(option){
     return deliveryDate = today.add(
         option.deliveryTime, "days"
     ).format("dddd, MMMM D")
+}
+
+export function getDeliveryOptions(id){
+    let deliveryOption;
+
+    deliveryOptions.forEach(option => {
+        if (option.id === Number(id)) {
+            deliveryOption = option;
+        }
+    });
+    return deliveryOption || deliveryOptions[0];
 }

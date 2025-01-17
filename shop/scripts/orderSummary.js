@@ -1,7 +1,7 @@
 import { removeFromCart, cart, findProduct, reduceQty, addToCart, increaseQty, updateDeliveryOption } from "../../data/cart.js";
-import { deliveryOptions, generateDeliveryDate, renderDeliveryOptions } from "../../data/deliveryOptions.js";
+import { deliveryOptions, generateDeliveryDate, getDeliveryOptions, renderDeliveryOptions } from "../../data/deliveryOptions.js";
 import { products } from "../../data/products.js";
-import { inNaira } from "./utils/moneyUtil.js";
+import { formatToNaira } from "./utils/moneyUtil.js";
 import { renderCheckout } from "./utils/rendering.js";
 
 
@@ -23,15 +23,8 @@ export function renderOrderSummary(){
 
         const deliveryOptionId = Number(cartItem.deliveryOptionId);
 
-        let deliveryOption;
-
-        deliveryOptions.forEach(option => {
-            if (option.id === deliveryOptionId) {
-                deliveryOption = option;
-            }
-        });
+        const deliveryOption = getDeliveryOptions(deliveryOptionId);
         
-        // console.log(deliveryOptions)
         let deliveryDate = generateDeliveryDate(deliveryOption);
 
         orderSummary.innerHTML += `
@@ -58,7 +51,7 @@ export function renderOrderSummary(){
                                 </div>
                             </div>
                             <div class="product-price">
-                                ${inNaira(matchingProduct["priceCents"])}
+                                ${formatToNaira(matchingProduct["priceCents"])}
                             </div>
                             <div class="product-quantity">
                                 <span class="flex quantity-display">

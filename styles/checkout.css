@@ -102,6 +102,7 @@ body{
     justify-content: space-between;
     padding-left: 2%;
     min-width: 210px;
+    max-width: 450px;
 }
 
 .product-image {
