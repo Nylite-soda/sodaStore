@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     qtyContainer.innerHTML = cartQuantity;
 });
 
-export const cart  = getFromStorage("cart") || [];
+export let cart  = getFromStorage("cart") || [];
 
 export function findProduct(id) {
     for (let product of products) {
@@ -43,7 +43,11 @@ export function addToCart (id) {
     saveToStorage("cart", cart);
 }
 
-export function removeFromCart(id) {}
+export function removeFromCart(id) {
+    cart = cart.filter(cartItem => cartItem.id !== id);
+    updateCartQuantity();
+    saveToStorage("cart", cart);
+}
 
 export function updateCartQuantity(){
     cartQuantity = 0;

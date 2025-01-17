@@ -31,7 +31,7 @@ body{
     color: #85604F;
     padding-bottom: 2px;
 }
-a:hover{
+.empty-cart a:hover{
     text-decoration: underline;
 }
 
@@ -42,10 +42,10 @@ a:hover{
     align-items: start;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1050px) {
     .main{
         position: relative;
-        top: -70px;
+        top: -200px;
         transform: scale(0.9);
     }
     .checkout-grid {
@@ -57,6 +57,7 @@ a:hover{
     }
     .cart-item-details-grid {
         grid-template-columns: 1fr !important;
+        gap: 15px;
     }
     .product-image{
         margin: 0 !important;
@@ -86,7 +87,7 @@ a:hover{
 
 .cart-item-details-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 55% 45%;
     column-gap: 25px;
 }
 
@@ -94,11 +95,13 @@ a:hover{
     display: flex;
     gap: 10px;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding-left: 2%;
+    min-width: 210px;
 }
 
 .product-image {
-    max-width: 100%;
+    max-width: 100px;
     max-height: 120px;
     /* margin: 0 auto; */
 }
@@ -145,7 +148,7 @@ a:hover{
 
 .delivery-options{
     border-left: 1px solid #45322C;
-    padding-left: 50px;
+    padding-left: 8%;
 }
 
 .delivery-options-title {
@@ -283,4 +286,8 @@ a:hover{
     display: flex;
     gap: 5px;
     cursor: pointer;
+}
+.delete-quantity-link:hover{
+    color: rgb(0, 118, 0);
+    text-decoration: underline;
 }

@@ -1,12 +1,14 @@
-import { cart, findProduct } from "../../data/cart.js";
+import { removeFromCart, cart, findProduct } from "../../data/cart.js";
 import { products } from "../../data/products.js";
 import { inNaira } from "./utils/moneyUtil.js";
+import { renderCheckout } from "./utils/rendering.js";
 
 
 
 
 export function renderOrderSummary(){
     const orderSummary = document.querySelector('.js-order-summary');
+    orderSummary.innerHTML=``;
     if (cart.length === 0) {
         orderSummary.innerHTML = `
             <div class="empty-cart flex">
@@ -18,7 +20,8 @@ export function renderOrderSummary(){
     for (let cartItem of cart) {
         let matchingProduct = findProduct(cartItem.id);
         orderSummary.innerHTML += `
-            <div class="cart-item-container">
+            <div class="cart-item-container
+                js-cart-item-container-${matchingProduct.id}">
                 <div class="delivery-date">
                     Delivery date: Tuesday, June 21
                 </div>
@@ -47,7 +50,7 @@ export function renderOrderSummary(){
                                 Quantity
                                 <div class="update-qty flex"><button class="qty qty-left">-</button><div class="qty qty-value flex">${cartItem.quantity}</div><button class="qty qty-right">+</button></div>
                             </span>
-                            <span class="delete-quantity-link link-primary">
+                            <span class="delete-quantity-link js-delete-quantity-link link-primary" data-product-id=${matchingProduct.id}>
                                 <svg class="bin" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3.15789 26.8421C3.15789 28.5837 4.57421 30 6.31579 30H22.1053C23.8468 30 25.2632 28.5837 25.2632 26.8421V7.89474H3.15789V26.8421ZM6.31579 11.0526H22.1053L22.1068 26.8421H6.31579V11.0526ZM18.9474 3.15789V0H9.47368V3.15789H0V6.31579H28.4211V3.15789H18.9474Z" fill="#45322C"/>
                                     <path d="M9.47363 14.2105H12.6315V23.6842H9.47363V14.2105ZM15.7894 14.2105H18.9473V23.6842H15.7894V14.2105Z" fill="#45322C"/>
@@ -106,4 +109,16 @@ export function renderOrderSummary(){
             </div>
         `;
     }
+
+    document.querySelectorAll('.js-delete-quantity-link').forEach(link => {
+        link.addEventListener('click', () => {
+            let id = link.dataset.productId;
+            document.querySelector(`.js-cart-item-container-${id}`).remove();
+            removeFromCart(id);
+            renderCheckout();
+        })
+    });
 }
+
+
+
