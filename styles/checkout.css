@@ -45,12 +45,13 @@ body{
 @media (max-width: 1050px) {
     .main{
         position: relative;
-        top: -200px;
+        /* top: -50px; */
         transform: scale(0.9);
     }
     .checkout-grid {
       grid-template-columns: 1fr;
       margin: 0 auto;
+      gap: 20px;
     }
     .empty-cart{
         height: 150px;
@@ -251,6 +252,9 @@ body{
     background-color: #F1D3B3a3;
     border: 0.3px solid #45322C77;
     height: 32px;
+}
+.qty:focus-visible{
+    outline: none;
 }
 .qty-left{
     width: 30px;

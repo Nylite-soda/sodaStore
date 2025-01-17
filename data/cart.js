@@ -5,11 +5,14 @@ let matchingProduct;
 let qtyContainer;
 export let cartQuantity;
 
-document.addEventListener('DOMContentLoaded', () => {
+
+function updateQtyHTML() {
     cartQuantity = getFromStorage("cartQty") || 0;
-    qtyContainer = document.querySelector(".js-cart-quantity");
-    qtyContainer.innerHTML = cartQuantity;
-});
+    qtyContainer = document.querySelectorAll(".js-cart-quantity");
+    qtyContainer.forEach(container => {
+        container.innerHTML = cartQuantity;
+    });
+}
 
 export let cart  = getFromStorage("cart") || [];
 
@@ -36,7 +39,8 @@ export function addToCart (id) {
     } else {
         cart.unshift({
             id: matchingProduct.id,
-            quantity: 1
+            quantity: 1,
+            deliveryOptionId: 1
         });
     }
     updateCartQuantity();
@@ -55,6 +59,48 @@ export function updateCartQuantity(){
         cartQuantity += cartItem.quantity
     })
     
-    qtyContainer.innerHTML = cartQuantity;
     saveToStorage("cartQty", cartQuantity);
+    updateQtyHTML();
+}
+
+export function reduceQty(id){
+    let itemInCart;
+    cart.forEach(cartItem => {
+        if (id === cartItem.id) {
+            itemInCart = cartItem;
+        }
+    });
+
+    if (itemInCart.quantity === 1) {
+        document.querySelector(`.js-cart-item-container-${id}`).remove();
+        removeFromCart(id);
+    } else{
+        itemInCart.quantity -= 1;
+        updateCartQuantity();
+        saveToStorage("cart", cart);
+    }
+}
+export function increaseQty(id){
+    let itemInCart;
+    cart.forEach(cartItem => {
+        if (id === cartItem.id) {
+            itemInCart = cartItem;
+        }
+    });
+
+    itemInCart.quantity += 1;
+    updateCartQuantity();
+    saveToStorage("cart", cart);
+}
+
+export function updateDeliveryOption(productId, deliveryOptionId){
+    let itemInCart;
+    cart.forEach(cartItem => {
+        if (productId === cartItem.id) {
+            itemInCart = cartItem;
+        }
+    });
+
+    itemInCart.deliveryOptionId = deliveryOptionId;
+    saveToStorage("cart", cart);
 }

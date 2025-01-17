@@ -24,7 +24,7 @@ export function renderNavBarandFooter(){
         <div class="actionicons flex">
             <ul class="flex">
                 <li><a href="" class="icons"><img src="images/person.svg" alt=""></a></li>
-                <li><a href="" class="icons"><img src="images/shopping_cart.svg" alt=""></a></li>
+                <li><a href="checkout.html" class="icons"><img src="images/shopping_cart.svg" alt=""></a></li>
                 <li><a href="" class="icons"><img src="images/search.svg" alt=""></a></li>
             </ul>
         </div>
@@ -39,7 +39,7 @@ export function renderNavBarandFooter(){
             <div class="actionicons flex">
                 <ul class="flex">
                     <li><a href="" class="icons"><img src="images/person.svg" alt=""></a></li>
-                    <li><a href="" class="icons"><img src="images/shopping_cart.svg" alt=""></a></li>
+                    <li><a href="checkout.html" class="icons"><img src="images/shopping_cart.svg" alt=""></a></li>
                     <li><a href="" class="icons"><img src="images/search.svg" alt=""></a></li>
                 </ul>
             </div>
@@ -130,6 +130,8 @@ export function renderStoreHeader(){
           </a>
         </div>
     `;
+    
+    updateCartQuantity();
 }
 
 export function renderProducts(num, grid) {
@@ -180,6 +182,5 @@ export function renderCheckout(){
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
       renderNavBarandFooter();
-      updateCartQuantity();
     });
 });
