@@ -283,7 +283,7 @@ svg{
     }
     
     .wrap{
-        width: 350px;
+        width: 320px;
         height: auto;
         position: relative;
     }
@@ -325,7 +325,7 @@ svg{
     }
     
     .leaveAmessage{
-        width: 350px;
+        width: 320px;
         height: 470px;
         background-color: #F1D3B3;
         border-radius: 20px 20px 0 0;
@@ -367,7 +367,7 @@ svg{
         background-color: #F2E5D8;
         border-radius: 9px;
         padding: 8px 8px 8px 10px ; */
-        width: 75%;
+        width: 85%;
         margin: 5px 0;
     }
     
@@ -379,7 +379,7 @@ svg{
     }
     
     .contact-form textarea{
-        width: 75%;
+        width: 85%;
     }
 
     .gap{

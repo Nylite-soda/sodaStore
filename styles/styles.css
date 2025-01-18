@@ -18,7 +18,7 @@ body{
 }
 
 main{
-    padding-top: 90px;
+    padding-top: 80px;
 }
 
 .section{
@@ -383,9 +383,20 @@ footer{
 /* Media Adjustments */
 
 @media screen and (max-width: 1100px) {
+    main{
+        padding-top: 50px;
+    }
     
     .navbar{
         justify-content: space-between !important;
+        padding: 0 15px;
+    }
+    
+    .logo img{
+        height: 40px;
+    }
+    .icons img{
+        height: 20px;
     }
 
     .mobilemenu {
@@ -393,34 +404,25 @@ footer{
     }
     .mobilemenu ul{
         list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         cursor: pointer;
     }
     .hamburger{
         background-color: #45322C;
-        height: 6px;
-        width: 48px;
+        width: 40px;
+        height: 7px;
+        margin: 6px 0;
         border-radius: 6px;
         transition: ease-in-out 0.2s;
+        transform-origin: center;
     }
-    .mid-burger{
-        margin: 8px 0;
-        height: 6px !important;
+    #ham:hover ul .top-burger {
+        transform: translateY(13px) rotate(45deg);
     }
-    #ham:hover ul li:nth-child(1) {
-        height: 7px;
-        transform: translateY(14px) rotate(45deg);
-    }
-    #ham:hover ul li:nth-child(2) {
-        height: 7px;
-        transform: rotate(-45deg);
+    #ham:hover ul .mid-burger {
         opacity: 0;
     }
-    #ham:hover ul li:nth-child(3) {
-        height: 7px;
-        transform: translateY(-14px) rotate(-45deg);
+    #ham:hover ul .bottom-burger {
+        transform: translateY(-13px) rotate(-45deg);
     }
 
     .right-side{

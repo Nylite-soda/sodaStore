@@ -46,9 +46,9 @@ export function renderNavBarandFooter(){
 
             <div class="mobilemenu" id="ham">
                 <ul>
-                    <li class="hamburger"></li>
+                    <li class="hamburger top-burger"></li>
                     <li class="hamburger mid-burger"></li>
-                    <li class="hamburger"></li>
+                    <li class="hamburger bottom-burger"></li>
                 </ul>
             </div>
         </div>
