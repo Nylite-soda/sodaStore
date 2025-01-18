@@ -118,6 +118,10 @@ body{
     flex-direction: column;
 }
 
+.popular-products-grid .product-container{
+    width: 300px;
+}
+
 .popular-products-title{
     color: #45322C;
     padding: 5px 0;
@@ -300,6 +304,11 @@ main{
 }
 
 @media screen and (max-width: 1300px){
+    .popular-products-grid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
     .today-deals-products, .top-picks-products{
         scroll-behavior: smooth;
         overflow-x: auto;
