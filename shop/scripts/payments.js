@@ -1,7 +1,6 @@
 import { renderPaymentSummary } from "./paymentSummary.js";
 import { formatCurrency } from "./utils/moneyUtil.js";
 import { renderNavBarandFooter } from "./utils/rendering.js";
-import 'https://js.paystack.co/v1/inline.js';
 
 
 renderNavBarandFooter();
