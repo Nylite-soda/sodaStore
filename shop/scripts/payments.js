@@ -15,6 +15,7 @@ export function payWithPaystack() {
         return;
     }
     email = document.getElementById('email').value;
+    console.log('got here')
 
     const handler = PaystackPop.setup({
         key: 'pk_test_8bbbaf3344e247196567482948a2d26f6b1d9464', 
