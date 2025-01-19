@@ -15,24 +15,21 @@ export function payWithPaystack() {
         return;
     }
     email = document.getElementById('email').value;
-    // const amount = document.getElementById('amount').value * 100; // Convert to kobo
 
     const handler = PaystackPop.setup({
-        key: 'YOUR_PUBLIC_KEY', // Replace with your Paystack public key
+        key: 'pk_test_8bbbaf3344e247196567482948a2d26f6b1d9464', 
         email: email,
         amount: amount,
-        currency: 'NGN', // Replace with your currency (e.g., USD, GHS)
+        currency: 'NGN', 
         callback: function (response) {
-            // Handle successful payment
             alert('Payment complete! Reference: ' + response.reference);
-            // Optionally, you can verify the payment on your backend
         },
         onClose: function () {
             alert('Payment window closed.');
         },
     });
 
-    handler.openIframe(); // Open the Paystack payment popup
+    handler.openIframe();
 }
 
 const amount = JSON.parse(localStorage.getItem('total'));
