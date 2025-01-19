@@ -8,31 +8,28 @@ renderNavBarandFooter();
 renderPaymentSummary();
 
 export function payWithPaystack() {
-    const email = '';
+    const email = document.getElementById('email').value;
 
     if(!email){
         alert("Kindly enter Payer's email");
         return;
     }
-    email = document.getElementById('email').value;
     console.log('got here')
 
-    window.onload = function() {
-        const handler = PaystackPop.setup({
-            key: 'pk_test_8bbbaf3344e247196567482948a2d26f6b1d9464', 
-            email: email,
-            amount: amount,
-            currency: 'NGN', 
-            callback: function (response) {
-                alert('Payment complete! Reference: ' + response.reference);
-            },
-            onClose: function () {
-                alert('Payment window closed.');
-            },
-        });
+    const handler = PaystackPop.setup({
+        key: 'pk_test_8bbbaf3344e247196567482948a2d26f6b1d9464', 
+        email: email,
+        amount: amount,
+        currency: 'NGN', 
+        callback: function (response) {
+            alert('Payment complete! Reference: ' + response.reference);
+        },
+        onClose: function () {
+            alert('Payment window closed.');
+        },
+    });
 
-        handler.openIframe();
-    }
+    handler.openIframe();
 }
 
 const amount = JSON.parse(localStorage.getItem('total'));
