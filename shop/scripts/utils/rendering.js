@@ -23,7 +23,7 @@ export function renderNavBarandFooter(){
 
         <div class="actionicons flex">
             <ul class="flex">
-                <li><a href="" class="icons"><img src="images/person.svg" alt=""></a></li>
+                <li><a href="login-page.html" class="icons"><img src="images/person.svg" alt=""></a></li>
                 <li><a href="checkout.html" class="icons"><img src="images/shopping_cart.svg" alt=""></a></li>
                 <li><a href="" class="icons"><img src="images/search.svg" alt=""></a></li>
             </ul>
@@ -38,7 +38,7 @@ export function renderNavBarandFooter(){
         <div class="right-side flex">
             <div class="actionicons flex">
                 <ul class="flex">
-                    <li><a href="" class="icons"><img src="images/person.svg" alt=""></a></li>
+                    <li><a href="login-page.html" class="icons"><img src="images/person.svg" alt=""></a></li>
                     <li><a href="checkout.html" class="icons"><img src="images/shopping_cart.svg" alt=""></a></li>
                     <li><a href="" class="icons"><img src="images/search.svg" alt=""></a></li>
                 </ul>

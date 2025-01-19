@@ -1,0 +1,192 @@
+
+body{
+    background-color: #f4f2f2;
+}
+
+main{
+    padding-top: 90px;
+}
+@media screen and (max-width: 1100px) {
+    main{
+        padding-top: 65px;
+    }
+    .card{
+        transform: scale(0.9);
+    }
+}
+
+.login-container{
+    width: 100%;
+    background-color: #F1D3B3;
+    /* padding: 25px 35px; */
+    perspective: 1000px;
+    box-shadow: #45322C 0px 4px 8px;
+}
+
+.toggle-bar {
+    justify-content: space-around;
+    gap: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.toggle-bar button {
+    background: transparent;
+    width: 100%;
+    border: none;
+    font-size: 100%;
+    letter-spacing: 0.5px;
+    padding: 25px 10px 20px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+.toggle-bar button.active {
+    background-color: #45322C;
+    color: #f4f2f2;
+    border-bottom: 1px solid #45322C;
+}
+
+.card{
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.login, .register{
+    display: none;
+    /* backface-visibility: hidden; */
+}
+.login.active, .register.active{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #45322C;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    color: #45322C;
+    margin: 4vw auto 2vw;
+}
+
+.form {
+    width: 80%;
+    flex-direction: column;
+}
+.form .inputField {
+    width: 100%;
+    max-width: 370px;
+    border: none;
+    border-radius: 9px;
+    margin-top: 12px;
+    font-size: 1em;
+    padding-inline-start: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #F2E5D8;
+}
+.form .input::placeholder{
+    color: rgba(69, 50, 44, 0.5);
+    letter-spacing: 0.1px;
+}
+.form .inputField:focus {
+    border: none;
+    outline: none;
+    border-inline: 2px solid #45322C;
+}
+
+.form .forgot-password {
+    width: 100%;
+    max-width: 370px;
+    margin-top: 5px;
+    margin-right: 5px;
+    text-align: right;
+    letter-spacing: 0.3px;
+}
+.form .forgot-password a {
+    font-size: 0.8em;
+    color: #45322C;
+    text-decoration: none;
+}
+.form .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.form .login-button {
+    width: 90%;
+    max-width: 490px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    color: #f4f2f2;
+    background-color: #45322C;
+    border: none;
+    padding: 15px;
+    margin: 40px auto;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+.form .login-button:hover {
+    transform: scale(1.01);
+    box-shadow: #85604F 0px 23px 10px -20px;
+}
+.form .login-button:active {
+    transform: scale(0.95);
+    box-shadow: #F2E5D8 0px 15px 10px -10px;
+}
+
+.social-account-container {
+    margin-top: 30px;
+}
+
+.social-account-container .title {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.1px;
+    color: rgba(69, 50, 44, 0.8);
+}
+
+.social-accounts {
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-button {
+    background-color: #F1D3B3;
+    border: 5px solid #45322C;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1;
+    box-shadow: #85604F 0px 12px 10px -8px;
+    transition: ease 0.2s;
+}
+
+.social-button .svg {
+    position: relative;
+    top: 0;
+    right: 0;
+    fill: #45322C;
+    margin: auto;
+    height: 15px;
+    aspect-ratio: 1;
+}
+.apple svg{
+    transform: scale(1.2);
+    top: -2px !important;
+}
+.social-button:hover {
+    transform: scale(1.11);
+}
+.social-button:active {
+    transform: scale(0.95);
+}
+
+.agreement {
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+.agreement a {
+    text-decoration: none;
+    color: rgb(177, 39, 4);
+    font-size: 11px;
+}
