@@ -18,7 +18,7 @@ export function payWithPaystack() {
     console.log('got here')
 
     const handler = PaystackPop.setup({
-        key: 'pk_test_8bbbaf3344e247196567482948a2d26f6b1d9464', 
+        key: 'pk_live_e8bc5b678aea8c2d0fb67cf9a8901a6616e81985', 
         email: email,
         amount: amount,
         currency: 'NGN', 
