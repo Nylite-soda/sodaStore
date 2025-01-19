@@ -28,7 +28,7 @@
             <div class="flex">
                 <label for="amount">Amount: </label> <span class="total-amount"></span>
             </div>
-                <button type="button" class="pay-button" onclick="import('/shop/scripts/payments.js').then(pay => payWithPaystack())">Pay</button>
+                <button type="button" class="pay-button" onclick="import('/shop/scripts/payments.js').then(pay => pay.payWithPaystack())">Pay</button>
             </div>
         </form>
 
