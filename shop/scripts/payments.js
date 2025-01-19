@@ -17,20 +17,22 @@ export function payWithPaystack() {
     email = document.getElementById('email').value;
     console.log('got here')
 
-    const handler = PaystackPop.setup({
-        key: 'pk_live_e8bc5b678aea8c2d0fb67cf9a8901a6616e81985', 
-        email: email,
-        amount: amount,
-        currency: 'NGN', 
-        callback: function (response) {
-            alert('Payment complete! Reference: ' + response.reference);
-        },
-        onClose: function () {
-            alert('Payment window closed.');
-        },
-    });
+    window.onload = function() {
+        const handler = PaystackPop.setup({
+            key: 'pk_test_8bbbaf3344e247196567482948a2d26f6b1d9464', 
+            email: email,
+            amount: amount,
+            currency: 'NGN', 
+            callback: function (response) {
+                alert('Payment complete! Reference: ' + response.reference);
+            },
+            onClose: function () {
+                alert('Payment window closed.');
+            },
+        });
 
-    handler.openIframe();
+        handler.openIframe();
+    }
 }
 
 const amount = JSON.parse(localStorage.getItem('total'));
