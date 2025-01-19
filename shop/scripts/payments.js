@@ -7,6 +7,10 @@ import 'https://js.paystack.co/v1/inline.js';
 renderNavBarandFooter();
 renderPaymentSummary();
 
+const amount = JSON.parse(localStorage.getItem('total'));
+
+document.querySelector(".total-amount").innerHTML = `₦ ${formatCurrency(amount)}`;
+
 export function payWithPaystack() {
     const email = document.getElementById('email').value;
 
@@ -32,7 +36,4 @@ export function payWithPaystack() {
     handler.openIframe();
 }
 
-const amount = JSON.parse(localStorage.getItem('total'));
-
-document.querySelector(".total-amount").innerHTML = `₦ ${formatCurrency(amount)}`;
 
