@@ -1,6 +1,7 @@
 import { cart, findProduct, updateQtyHTML } from "../../data/cart.js";
 import { getDeliveryOptions } from "../../data/deliveryOptions.js";
-import { formatCurrency, formatToNaira, priceInNaira } from "./utils/moneyUtil.js";
+import { formatCurrency, priceInNaira } from "./utils/moneyUtil.js";
+import { saveToStorage } from "./utils/storage.js";
 
 
 export function renderPaymentSummary(){
@@ -49,9 +50,10 @@ export function renderPaymentSummary(){
           </div>
         </div>
 
-          <button class="place-order-button button-primary">
+          <button class="place-order-button button-primary" onclick="window.location.href = 'payments.html';">
             Place your order
           </button>
     `;
+    saveToStorage("total", totalCents);
     updateQtyHTML();
 }

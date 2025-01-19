@@ -1,6 +1,5 @@
 import { removeFromCart, cart, findProduct, reduceQty, addToCart, increaseQty, updateDeliveryOption } from "../../data/cart.js";
-import { deliveryOptions, generateDeliveryDate, getDeliveryOptions, renderDeliveryOptions } from "../../data/deliveryOptions.js";
-import { products } from "../../data/products.js";
+import { generateDeliveryDate, getDeliveryOptions, renderDeliveryOptions } from "../../data/deliveryOptions.js";
 import { formatToNaira } from "./utils/moneyUtil.js";
 import { renderCheckout } from "./utils/rendering.js";
 

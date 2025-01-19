@@ -10,7 +10,7 @@ main{
     main{
         padding-top: 65px;
     }
-    .card{
+    .scale{
         transform: scale(0.9);
     }
 }
