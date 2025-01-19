@@ -17,8 +17,8 @@
     <main>
         <div class="login-container">
             <div class="toggle-bar flex">
-                <button id="signInBtn" class="active" onclick="showForm('signIn')">Sign In</button>
-                <button id="registerBtn" onclick="showForm('register')">Sign Up</button>
+                <button id="signInBtn" class="active" onclick="import('./scripts/login.js').then(loginJS => loginJS.showForm('signIn'))">Sign In</button>
+                <button id="registerBtn" onclick="import('./scripts/login.js').then(loginJS => loginJS.showForm('register'))">Sign Up</button>
             </div>
 
             <div class="card" id="card">

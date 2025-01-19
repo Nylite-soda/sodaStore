@@ -21,7 +21,7 @@ body{
     justify-content: space-around;
     align-self: center;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.29);
-    z-index: 999;
+    z-index: 9;
 }
 
 .shop-header-left-section{
@@ -304,6 +304,10 @@ main{
 }
 
 @media screen and (max-width: 1300px){
+    .dropdown-menu{
+        position: fixed;
+        bottom: 0;
+    }
     .popular-products-grid{
         display: flex;
         flex-wrap: wrap;

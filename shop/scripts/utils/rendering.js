@@ -44,7 +44,9 @@ export function renderNavBarandFooter(){
                 </ul>
             </div>
 
-            <div class="mobilemenu" id="ham">
+            <div class="mobilemenu" id="ham"
+                onclick="import('./scripts/handleActive.js').then(toggle => toggle.handleMobileNav())"
+                >
                 <ul>
                     <li class="hamburger top-burger"></li>
                     <li class="hamburger mid-burger"></li>
@@ -135,7 +137,6 @@ export function renderStoreHeader(){
 }
 
 export function renderProducts(num, grid) {
-    console.log(num)
     for (let i = 0; i < num; i++) {
         grid.innerHTML += `
         <div class="product-container flex">
