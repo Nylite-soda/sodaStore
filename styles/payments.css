@@ -5,7 +5,7 @@ h1{
 }
 
 main{
-    padding: 50px 30px;
+    padding: 70px 30px;
     color: #45322C;
 }
 
@@ -34,7 +34,7 @@ main{
     padding-inline-start: 10px;
     padding-top: 7px;
     padding-bottom: 7px;
-    min-width: 200px;
+    min-width: 150px;
     width: 60%;
     max-width: 400px;
     border-radius: 7px;

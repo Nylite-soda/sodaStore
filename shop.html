@@ -31,8 +31,7 @@
     </section>
     <div class="divider-large-dark"></div>
 
-    <footer class="flex js-footer">
-    </footer>
+    <footer class="flex js-footer"></footer>
 
     <script type="module" src="./shop/scripts/shop.js"></script>
 </body>
